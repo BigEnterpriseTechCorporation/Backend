@@ -32,6 +32,7 @@ public class AccountController : ControllerBase
         {
             UserName = rq.UserName,
             Email = $"{rq.UserName}@localhost",
+            FullName = rq.FullName,
         };
         
         try
