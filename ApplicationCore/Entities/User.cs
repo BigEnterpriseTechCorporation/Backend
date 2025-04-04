@@ -1,4 +1,6 @@
+using System.Collections;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Principal;
 using Microsoft.AspNetCore.Identity;
 
 namespace ApplicationCore.Entities;
@@ -17,11 +19,5 @@ public class User : IdentityUser<Guid>
     
     public string Role { get; set; } = "Member";
     
-    // Navigation
-    public ICollection<Article> AuthoredArticles { get; set; }
-    public ICollection<Article> EditedArticles { get; set; }
-    public ICollection<Assignment> CreatedAssignments { get; set; }
-    public ICollection<Assignment> ResponsibleAssignments { get; set; }
-    public ICollection<ArticleHistory> ArticleHistories { get; set; }
-    // assigment history
+    public ICollection<Image> UploadedImages { get; set; }
 }
